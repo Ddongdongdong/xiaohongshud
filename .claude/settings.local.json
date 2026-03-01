@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(pip show:*)",
+      "Bash(node:*)",
+      "Bash(npm install:*)",
+      "Bash(curl:*)",
+      "Bash(netstat:*)",
+      "Bash(pip install:*)",
+      "Bash(start cmd:*)",
+      "Bash(taskkill:*)",
+      "Bash(powershell:*)",
+      "Bash(NO_PROXY=\"localhost,127.0.0.1\" python:*)",
+      "Bash(NO_PROXY=\"localhost,127.0.0.1\" no_proxy=\"localhost,127.0.0.1\" python:*)"
+    ]
+  }
+}

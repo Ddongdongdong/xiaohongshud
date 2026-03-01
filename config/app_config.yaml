@@ -1,0 +1,31 @@
+database:
+  host: localhost
+  port: 3306
+  user: root
+  password: ""
+  db: xhs_data
+
+redis:
+  host: localhost
+  port: 6379
+  db: 0
+
+celery:
+  broker: "redis://localhost:6379/1"
+  backend: "redis://localhost:6379/2"
+
+llm:
+  provider: deepseek
+  api_key: ""          # 填写你的 DeepSeek API Key
+  model: deepseek-chat
+  base_url: "https://api.deepseek.com/v1"
+
+monitoring:
+  fetch_interval_hours: 6    # content-data 定时抓取间隔（小时）
+  low_perf_check_hours: 24   # 低效帖检测间隔（小时）
+  thresholds:
+    hours_after_publish: 24  # 发布多少小时后开始评估
+    min_exposure: 500        # 最低曝光量
+    min_ctr_pct: 5.0         # 最低封面点击率 %
+    min_likes: 10            # 最低点赞数
+    min_collects: 5          # 最低收藏数
